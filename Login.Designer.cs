@@ -38,6 +38,8 @@ namespace DIgital_Diary
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.loginclosed = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,17 +140,46 @@ namespace DIgital_Diary
             // 
             // guna2Elipse1
             // 
+            this.guna2Elipse1.BorderRadius = 10;
             this.guna2Elipse1.TargetControl = this;
             // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(705, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(38, 29);
+            this.guna2ControlBox2.TabIndex = 9;
+            // 
+            // loginclosed
+            // 
+            this.loginclosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.loginclosed.BackColor = System.Drawing.Color.Transparent;
+            this.loginclosed.FillColor = System.Drawing.Color.Transparent;
+            this.loginclosed.HoverState.Parent = this.loginclosed;
+            this.loginclosed.IconColor = System.Drawing.Color.Black;
+            this.loginclosed.Location = new System.Drawing.Point(749, 12);
+            this.loginclosed.Name = "loginclosed";
+            this.loginclosed.ShadowDecoration.Parent = this.loginclosed;
+            this.loginclosed.Size = new System.Drawing.Size(38, 29);
+            this.loginclosed.TabIndex = 8;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.loginclosed);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Loginbtn);
@@ -172,6 +203,8 @@ namespace DIgital_Diary
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox loginclosed;
     }
 }
 

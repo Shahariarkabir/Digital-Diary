@@ -24,6 +24,7 @@ namespace DIgital_Diary
             {
                 Dashboard ds = new Dashboard();
                 ds.Show();
+                this.Hide();
             }
             else
             {
