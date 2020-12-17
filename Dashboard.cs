@@ -62,7 +62,10 @@ namespace DIgital_Diary
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
                 //Current Child Form Icon
-       
+                iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                iconCurrentChildForm.IconColor = color;
+
+
             }
         }
        private void DisableButton()
@@ -77,7 +80,32 @@ namespace DIgital_Diary
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-      
+
+        private void OpenChildForm(Form childForm)
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+   
+           
+        }
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.MediumPurple;
+       
+        }
+        //Events
+        //Reset
+
         private void btnAllNote_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
@@ -96,6 +124,12 @@ namespace DIgital_Diary
         private void btnTag_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+      
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("HH:MM tt");
         }
     }
 }

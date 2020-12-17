@@ -39,18 +39,22 @@ namespace DIgital_Diary
             this.Panellogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Searchbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.Searchbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.Panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -64,7 +68,7 @@ namespace DIgital_Diary
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(193, 666);
+            this.panelMenu.Size = new System.Drawing.Size(225, 717);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSetting
@@ -77,9 +81,9 @@ namespace DIgital_Diary
             this.btnSetting.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 256);
+            this.btnSetting.Location = new System.Drawing.Point(0, 276);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(193, 60);
+            this.btnSetting.Size = new System.Drawing.Size(225, 65);
             this.btnSetting.TabIndex = 7;
             this.btnSetting.Text = "Setting";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,9 +101,9 @@ namespace DIgital_Diary
             this.btnTag.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.btnTag.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTag.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTag.Location = new System.Drawing.Point(0, 322);
+            this.btnTag.Location = new System.Drawing.Point(0, 347);
             this.btnTag.Name = "btnTag";
-            this.btnTag.Size = new System.Drawing.Size(193, 60);
+            this.btnTag.Size = new System.Drawing.Size(225, 65);
             this.btnTag.TabIndex = 6;
             this.btnTag.Text = "Tag";
             this.btnTag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,9 +121,9 @@ namespace DIgital_Diary
             this.btnCreateNote.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.btnCreateNote.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCreateNote.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCreateNote.Location = new System.Drawing.Point(0, 190);
+            this.btnCreateNote.Location = new System.Drawing.Point(0, 205);
             this.btnCreateNote.Name = "btnCreateNote";
-            this.btnCreateNote.Size = new System.Drawing.Size(193, 60);
+            this.btnCreateNote.Size = new System.Drawing.Size(225, 65);
             this.btnCreateNote.TabIndex = 5;
             this.btnCreateNote.Text = "Create Note";
             this.btnCreateNote.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,9 +141,9 @@ namespace DIgital_Diary
             this.btnAllNote.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.btnAllNote.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAllNote.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllNote.Location = new System.Drawing.Point(0, 124);
+            this.btnAllNote.Location = new System.Drawing.Point(0, 134);
             this.btnAllNote.Name = "btnAllNote";
-            this.btnAllNote.Size = new System.Drawing.Size(193, 60);
+            this.btnAllNote.Size = new System.Drawing.Size(225, 65);
             this.btnAllNote.TabIndex = 4;
             this.btnAllNote.Text = "All Notes";
             this.btnAllNote.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,7 +157,7 @@ namespace DIgital_Diary
             this.Panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panellogo.Location = new System.Drawing.Point(0, 0);
             this.Panellogo.Name = "Panellogo";
-            this.Panellogo.Size = new System.Drawing.Size(193, 108);
+            this.Panellogo.Size = new System.Drawing.Size(225, 116);
             this.Panellogo.TabIndex = 2;
             // 
             // pictureBox1
@@ -161,7 +165,7 @@ namespace DIgital_Diary
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -169,45 +173,27 @@ namespace DIgital_Diary
             // paneltop
             // 
             this.paneltop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.paneltop.Controls.Add(this.label1);
             this.paneltop.Controls.Add(this.pictureBox2);
             this.paneltop.Controls.Add(this.Searchbox);
             this.paneltop.Controls.Add(this.guna2ControlBox2);
+            this.paneltop.Controls.Add(this.iconCurrentChildForm);
             this.paneltop.Controls.Add(this.guna2ControlBox1);
-            this.paneltop.Location = new System.Drawing.Point(195, 0);
+            this.paneltop.Location = new System.Drawing.Point(227, 0);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(1055, 62);
+            this.paneltop.Size = new System.Drawing.Size(1231, 67);
             this.paneltop.TabIndex = 1;
             // 
-            // guna2ControlBox2
+            // pictureBox2
             // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(961, 12);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(38, 29);
-            this.guna2ControlBox2.TabIndex = 1;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1005, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(38, 29);
-            this.guna2ControlBox1.TabIndex = 0;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this;
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(68, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // Searchbox
             // 
@@ -225,28 +211,61 @@ namespace DIgital_Diary
             this.Searchbox.Font = new System.Drawing.Font("JetBrains Mono", 9.749999F);
             this.Searchbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Searchbox.HoverState.Parent = this.Searchbox;
-            this.Searchbox.Location = new System.Drawing.Point(50, 13);
-            this.Searchbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Searchbox.Location = new System.Drawing.Point(35, 14);
+            this.Searchbox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Searchbox.Name = "Searchbox";
             this.Searchbox.PasswordChar = '\0';
             this.Searchbox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Searchbox.PlaceholderText = "Search Note";
             this.Searchbox.SelectedText = "";
             this.Searchbox.ShadowDecoration.Parent = this.Searchbox;
-            this.Searchbox.Size = new System.Drawing.Size(327, 37);
+            this.Searchbox.Size = new System.Drawing.Size(566, 40);
             this.Searchbox.TabIndex = 2;
             this.Searchbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox2
+            // guna2ControlBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(89, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1121, 13);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(44, 31);
+            this.guna2ControlBox2.TabIndex = 1;
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.Transparent;
+            this.iconCurrentChildForm.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(622, 18);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(38, 32);
+            this.iconCurrentChildForm.TabIndex = 2;
+            this.iconCurrentChildForm.TabStop = false;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1172, 13);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(44, 31);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this;
             // 
             // guna2DragControl2
             // 
@@ -256,14 +275,31 @@ namespace DIgital_Diary
             // 
             this.guna2DragControl3.TargetControl = this.paneltop;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.label1.Location = new System.Drawing.Point(679, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1250, 666);
+            this.ClientSize = new System.Drawing.Size(1458, 717);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panelMenu);
+            this.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
@@ -271,7 +307,9 @@ namespace DIgital_Diary
             this.Panellogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneltop.ResumeLayout(false);
+            this.paneltop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,5 +331,8 @@ namespace DIgital_Diary
         private Guna.UI2.WinForms.Guna2TextBox Searchbox;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

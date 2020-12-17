@@ -12,3 +12,17 @@ D:\Assignment\Me\DIgital-Diary\obj\Debug\DIgital-Diary.exe
 D:\Assignment\Me\DIgital-Diary\obj\Debug\DIgital-Diary.pdb
 D:\Assignment\Me\DIgital-Diary\bin\Debug\FontAwesome.Sharp.dll
 D:\Assignment\Me\DIgital-Diary\obj\Debug\DIgital_Diary.Dashboard.resources
+D:\Assignment\DIgital-Diary\bin\Debug\DIgital-Diary.exe.config
+D:\Assignment\DIgital-Diary\bin\Debug\DIgital-Diary.exe
+D:\Assignment\DIgital-Diary\bin\Debug\DIgital-Diary.pdb
+D:\Assignment\DIgital-Diary\bin\Debug\FontAwesome.Sharp.dll
+D:\Assignment\DIgital-Diary\bin\Debug\Guna.UI2.dll
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital-Diary.csprojAssemblyReference.cache
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital_Diary.Dashboard.resources
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital_Diary.Login.resources
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital_Diary.Properties.Resources.resources
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital-Diary.csproj.GenerateResource.cache
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital-Diary.csproj.CoreCompileInputs.cache
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital-Diary.csproj.CopyComplete
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital-Diary.exe
+D:\Assignment\DIgital-Diary\obj\Debug\DIgital-Diary.pdb
