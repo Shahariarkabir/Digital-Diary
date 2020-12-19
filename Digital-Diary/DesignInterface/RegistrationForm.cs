@@ -28,7 +28,8 @@ namespace DIgital_Diary.DesignInterface
 
             int result = command.ExecuteNonQuery();
             connection.Close();
-            if (result > 0)
+
+                if (result > 0)
             {
                 MessageBox.Show("User added successfully.");
                 RegFullName.Text = RegUserName.Text = RegEmail.Text = RegPassword.Text = RegConfirmPassword.Text = GenderButton.Text= RegDateOfBirthDate.Text = string.Empty;
@@ -49,7 +50,29 @@ namespace DIgital_Diary.DesignInterface
             }
         }
 
+        private void RegConfirmPassword_TextChanged(object sender, EventArgs e)
+        {
+            {
+                
+            }
 
+        }
 
+        private void RegConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            {
+                if (this.RegConfirmPassword.Text != this.RegPassword.Text)
+                {
+                    this.errorProvider1.SetError(this.RegConfirmPassword, "Password and Confirm must be the same");
+                    e.Cancel = true;
+                    RegPassword.Clear();
+                    RegConfirmPassword.Clear();
+                }
+                else
+                {
+                    this.errorProvider1.SetError(this.RegConfirmPassword, "");
+                }
+            }
+        }
     }
 }

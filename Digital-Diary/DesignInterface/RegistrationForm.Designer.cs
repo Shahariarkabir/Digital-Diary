@@ -29,6 +29,7 @@ namespace DIgital_Diary.DesignInterface
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.RegFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.RegPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,6 +41,11 @@ namespace DIgital_Diary.DesignInterface
             this.GenderButton = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.loginclosed = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,7 +53,7 @@ namespace DIgital_Diary.DesignInterface
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("JetBrains Mono Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(66)))), ((int)(((byte)(123)))));
-            this.label1.Location = new System.Drawing.Point(78, 18);
+            this.label1.Location = new System.Drawing.Point(78, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 26);
             this.label1.TabIndex = 9;
@@ -70,7 +76,7 @@ namespace DIgital_Diary.DesignInterface
             this.RegFullName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.RegFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegFullName.HoverState.Parent = this.RegFullName;
-            this.RegFullName.Location = new System.Drawing.Point(83, 63);
+            this.RegFullName.Location = new System.Drawing.Point(83, 76);
             this.RegFullName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegFullName.Name = "RegFullName";
             this.RegFullName.PasswordChar = '\0';
@@ -97,7 +103,7 @@ namespace DIgital_Diary.DesignInterface
             this.RegPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.RegPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegPassword.HoverState.Parent = this.RegPassword;
-            this.RegPassword.Location = new System.Drawing.Point(83, 240);
+            this.RegPassword.Location = new System.Drawing.Point(83, 253);
             this.RegPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegPassword.Name = "RegPassword";
             this.RegPassword.PasswordChar = '*';
@@ -124,7 +130,7 @@ namespace DIgital_Diary.DesignInterface
             this.RegEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.RegEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegEmail.HoverState.Parent = this.RegEmail;
-            this.RegEmail.Location = new System.Drawing.Point(83, 181);
+            this.RegEmail.Location = new System.Drawing.Point(83, 194);
             this.RegEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegEmail.Name = "RegEmail";
             this.RegEmail.PasswordChar = '\0';
@@ -151,7 +157,7 @@ namespace DIgital_Diary.DesignInterface
             this.RegUserName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.RegUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegUserName.HoverState.Parent = this.RegUserName;
-            this.RegUserName.Location = new System.Drawing.Point(83, 122);
+            this.RegUserName.Location = new System.Drawing.Point(83, 135);
             this.RegUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegUserName.Name = "RegUserName";
             this.RegUserName.PasswordChar = '\0';
@@ -198,7 +204,7 @@ namespace DIgital_Diary.DesignInterface
             this.RegConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.RegConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.RegConfirmPassword.HoverState.Parent = this.RegConfirmPassword;
-            this.RegConfirmPassword.Location = new System.Drawing.Point(83, 299);
+            this.RegConfirmPassword.Location = new System.Drawing.Point(83, 312);
             this.RegConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegConfirmPassword.Name = "RegConfirmPassword";
             this.RegConfirmPassword.PasswordChar = '*';
@@ -207,6 +213,9 @@ namespace DIgital_Diary.DesignInterface
             this.RegConfirmPassword.ShadowDecoration.Parent = this.RegConfirmPassword;
             this.RegConfirmPassword.Size = new System.Drawing.Size(274, 49);
             this.RegConfirmPassword.TabIndex = 15;
+            this.RegConfirmPassword.TextChanged += new System.EventHandler(this.RegConfirmPassword_TextChanged);
+            this.RegConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.RegConfirmPassword_Validating);
+            this.RegConfirmPassword.Validated += new System.EventHandler(this.RegConfirmPassword_TextChanged);
             // 
             // RegDateOfBirthDate
             // 
@@ -258,6 +267,7 @@ namespace DIgital_Diary.DesignInterface
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(465, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
@@ -268,17 +278,56 @@ namespace DIgital_Diary.DesignInterface
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(465, 118);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(465, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 19;
             this.label3.Text = "Gender";
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(699, 3);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(38, 29);
+            this.guna2ControlBox2.TabIndex = 21;
+            // 
+            // loginclosed
+            // 
+            this.loginclosed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.loginclosed.BackColor = System.Drawing.Color.Transparent;
+            this.loginclosed.FillColor = System.Drawing.Color.Transparent;
+            this.loginclosed.HoverState.Parent = this.loginclosed;
+            this.loginclosed.IconColor = System.Drawing.Color.Black;
+            this.loginclosed.Location = new System.Drawing.Point(743, 3);
+            this.loginclosed.Name = "loginclosed";
+            this.loginclosed.ShadowDecoration.Parent = this.loginclosed;
+            this.loginclosed.Size = new System.Drawing.Size(38, 29);
+            this.loginclosed.TabIndex = 20;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.ContainerControl = this;
+            this.guna2DragControl1.TargetControl = this;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeftChanged += new System.EventHandler(this.RegConfirmPassword_TextChanged);
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.loginclosed);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.GenderButton);
@@ -292,7 +341,8 @@ namespace DIgital_Diary.DesignInterface
             this.Controls.Add(this.RegFullName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrationForm";
-            this.Text = "RegistrationForm";
+            this.Text = "        ";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,5 +361,9 @@ namespace DIgital_Diary.DesignInterface
         private Guna.UI2.WinForms.Guna2ComboBox GenderButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox loginclosed;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
