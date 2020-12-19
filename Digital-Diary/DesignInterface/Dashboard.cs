@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DIgital_Diary.DesignInterface;
 using FontAwesome.Sharp;
 
 namespace DIgital_Diary
@@ -114,6 +115,9 @@ namespace DIgital_Diary
         private void btnCreateNote_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+
+            CreateNote CreateNewNote = new CreateNote();
+            CreateNewNote.Show();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

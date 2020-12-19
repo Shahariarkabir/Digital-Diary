@@ -39,6 +39,7 @@ namespace DIgital_Diary
             this.Panellogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Searchbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -47,8 +48,9 @@ namespace DIgital_Diary
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panelMenu.SuspendLayout();
             this.Panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,6 +175,7 @@ namespace DIgital_Diary
             // paneltop
             // 
             this.paneltop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.paneltop.Controls.Add(this.panel1);
             this.paneltop.Controls.Add(this.label1);
             this.paneltop.Controls.Add(this.pictureBox2);
             this.paneltop.Controls.Add(this.Searchbox);
@@ -183,6 +186,17 @@ namespace DIgital_Diary
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1231, 67);
             this.paneltop.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.label1.Location = new System.Drawing.Point(679, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
             // 
             // pictureBox2
             // 
@@ -265,31 +279,44 @@ namespace DIgital_Diary
             // 
             // guna2DragControl1
             // 
+            this.guna2DragControl1.ContainerControl = this;
             this.guna2DragControl1.TargetControl = this;
             // 
             // guna2DragControl2
             // 
+            this.guna2DragControl2.ContainerControl = this;
             this.guna2DragControl2.TargetControl = this.panelMenu;
             // 
             // guna2DragControl3
             // 
+            this.guna2DragControl3.ContainerControl = this;
             this.guna2DragControl3.TargetControl = this.paneltop;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.label1.Location = new System.Drawing.Point(679, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1231, 656);
+            this.panel1.TabIndex = 2;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(226, 64);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(1232, 650);
+            this.guna2Button1.TabIndex = 2;
+            this.guna2Button1.Text = "guna2Button1";
             // 
             // Dashboard
             // 
@@ -297,6 +324,7 @@ namespace DIgital_Diary
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1458, 717);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -334,5 +362,7 @@ namespace DIgital_Diary
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

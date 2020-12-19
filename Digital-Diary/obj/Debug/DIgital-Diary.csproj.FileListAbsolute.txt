@@ -46,3 +46,4 @@ D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\bin\Debug\MaterialDesignThem
 D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\bin\Debug\MaterialDesignThemes.Wpf.xml
 D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\obj\Debug\DIgital-Diary.csproj.CopyComplete
 D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\obj\Debug\DIgital_Diary.DesignInterface.RegistrationForm.resources
+D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\obj\Debug\DIgital_Diary.DesignInterface.CreateNote.resources
