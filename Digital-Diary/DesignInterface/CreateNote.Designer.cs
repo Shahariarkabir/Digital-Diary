@@ -31,10 +31,10 @@ namespace DIgital_Diary.DesignInterface
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNote));
-            this.UserNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Loginbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.EventTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.EventDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.PostNewEvent = new Guna.UI2.WinForms.Guna2Button();
+            this.MarkAsComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -56,6 +56,8 @@ namespace DIgital_Diary.DesignInterface
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.EventDate = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -64,106 +66,107 @@ namespace DIgital_Diary.DesignInterface
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // UserNameTextBox
+            // EventTitle
             // 
-            this.UserNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(77)))), ((int)(((byte)(164)))));
-            this.UserNameTextBox.BorderRadius = 10;
-            this.UserNameTextBox.BorderThickness = 2;
-            this.UserNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UserNameTextBox.DefaultText = "";
-            this.UserNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UserNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UserNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UserNameTextBox.DisabledState.Parent = this.UserNameTextBox;
-            this.UserNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UserNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UserNameTextBox.FocusedState.Parent = this.UserNameTextBox;
-            this.UserNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.UserNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UserNameTextBox.HoverState.Parent = this.UserNameTextBox;
-            this.UserNameTextBox.Location = new System.Drawing.Point(356, 134);
-            this.UserNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.UserNameTextBox.Name = "UserNameTextBox";
-            this.UserNameTextBox.PasswordChar = '\0';
-            this.UserNameTextBox.PlaceholderText = "Enter The Event Title";
-            this.UserNameTextBox.SelectedText = "";
-            this.UserNameTextBox.ShadowDecoration.Parent = this.UserNameTextBox;
-            this.UserNameTextBox.Size = new System.Drawing.Size(696, 49);
-            this.UserNameTextBox.TabIndex = 4;
+            this.EventTitle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(77)))), ((int)(((byte)(164)))));
+            this.EventTitle.BorderRadius = 10;
+            this.EventTitle.BorderThickness = 2;
+            this.EventTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EventTitle.DefaultText = "";
+            this.EventTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.EventTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.EventTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.EventTitle.DisabledState.Parent = this.EventTitle;
+            this.EventTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.EventTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EventTitle.FocusedState.Parent = this.EventTitle;
+            this.EventTitle.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.EventTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EventTitle.HoverState.Parent = this.EventTitle;
+            this.EventTitle.Location = new System.Drawing.Point(356, 134);
+            this.EventTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EventTitle.Name = "EventTitle";
+            this.EventTitle.PasswordChar = '\0';
+            this.EventTitle.PlaceholderText = "Enter The Event Title";
+            this.EventTitle.SelectedText = "";
+            this.EventTitle.ShadowDecoration.Parent = this.EventTitle;
+            this.EventTitle.Size = new System.Drawing.Size(696, 49);
+            this.EventTitle.TabIndex = 4;
             // 
-            // guna2TextBox1
+            // EventDescription
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(77)))), ((int)(((byte)(164)))));
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(356, 205);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Want To Write Something New ? Here Are the best  place for Write, Let\'s Start";
-            this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(696, 415);
-            this.guna2TextBox1.TabIndex = 5;
+            this.EventDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(77)))), ((int)(((byte)(164)))));
+            this.EventDescription.BorderRadius = 10;
+            this.EventDescription.BorderThickness = 2;
+            this.EventDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EventDescription.DefaultText = "";
+            this.EventDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.EventDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.EventDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.EventDescription.DisabledState.Parent = this.EventDescription;
+            this.EventDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.EventDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EventDescription.FocusedState.Parent = this.EventDescription;
+            this.EventDescription.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.EventDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.EventDescription.HoverState.Parent = this.EventDescription;
+            this.EventDescription.Location = new System.Drawing.Point(356, 205);
+            this.EventDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EventDescription.Name = "EventDescription";
+            this.EventDescription.PasswordChar = '\0';
+            this.EventDescription.PlaceholderText = "Want To Write Something New ? Here Are the best  place for Write, Let\'s Start";
+            this.EventDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.EventDescription.SelectedText = "";
+            this.EventDescription.ShadowDecoration.Parent = this.EventDescription;
+            this.EventDescription.Size = new System.Drawing.Size(696, 415);
+            this.EventDescription.TabIndex = 5;
             // 
-            // Loginbtn
+            // PostNewEvent
             // 
-            this.Loginbtn.BorderColor = System.Drawing.Color.White;
-            this.Loginbtn.BorderRadius = 10;
-            this.Loginbtn.BorderThickness = 2;
-            this.Loginbtn.CheckedState.Parent = this.Loginbtn;
-            this.Loginbtn.CustomImages.Parent = this.Loginbtn;
-            this.Loginbtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(77)))), ((int)(((byte)(164)))));
-            this.Loginbtn.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Loginbtn.ForeColor = System.Drawing.Color.White;
-            this.Loginbtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(66)))), ((int)(((byte)(123)))));
-            this.Loginbtn.HoverState.Parent = this.Loginbtn;
-            this.Loginbtn.Location = new System.Drawing.Point(1117, 519);
-            this.Loginbtn.Name = "Loginbtn";
-            this.Loginbtn.ShadowDecoration.Parent = this.Loginbtn;
-            this.Loginbtn.Size = new System.Drawing.Size(274, 49);
-            this.Loginbtn.TabIndex = 6;
-            this.Loginbtn.Text = "Post New Event";
+            this.PostNewEvent.BorderColor = System.Drawing.Color.White;
+            this.PostNewEvent.BorderRadius = 10;
+            this.PostNewEvent.BorderThickness = 2;
+            this.PostNewEvent.CheckedState.Parent = this.PostNewEvent;
+            this.PostNewEvent.CustomImages.Parent = this.PostNewEvent;
+            this.PostNewEvent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(77)))), ((int)(((byte)(164)))));
+            this.PostNewEvent.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.PostNewEvent.ForeColor = System.Drawing.Color.White;
+            this.PostNewEvent.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(66)))), ((int)(((byte)(123)))));
+            this.PostNewEvent.HoverState.Parent = this.PostNewEvent;
+            this.PostNewEvent.Location = new System.Drawing.Point(1117, 519);
+            this.PostNewEvent.Name = "PostNewEvent";
+            this.PostNewEvent.ShadowDecoration.Parent = this.PostNewEvent;
+            this.PostNewEvent.Size = new System.Drawing.Size(274, 49);
+            this.PostNewEvent.TabIndex = 6;
+            this.PostNewEvent.Text = "Post New Event";
+            this.PostNewEvent.Click += new System.EventHandler(this.PostNewEvent_Click);
             // 
-            // guna2ComboBox1
+            // MarkAsComboBox
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(166)))));
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.BorderThickness = 2;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 45;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.MarkAsComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.MarkAsComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(17)))), ((int)(((byte)(166)))));
+            this.MarkAsComboBox.BorderRadius = 10;
+            this.MarkAsComboBox.BorderThickness = 2;
+            this.MarkAsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MarkAsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MarkAsComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MarkAsComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MarkAsComboBox.FocusedState.Parent = this.MarkAsComboBox;
+            this.MarkAsComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.MarkAsComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.MarkAsComboBox.HoverState.Parent = this.MarkAsComboBox;
+            this.MarkAsComboBox.ItemHeight = 45;
+            this.MarkAsComboBox.Items.AddRange(new object[] {
             "High",
             "Moderate",
             "less important"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(1117, 448);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(274, 51);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 7;
+            this.MarkAsComboBox.ItemsAppearance.Parent = this.MarkAsComboBox;
+            this.MarkAsComboBox.Location = new System.Drawing.Point(1117, 448);
+            this.MarkAsComboBox.Name = "MarkAsComboBox";
+            this.MarkAsComboBox.ShadowDecoration.Parent = this.MarkAsComboBox;
+            this.MarkAsComboBox.Size = new System.Drawing.Size(274, 51);
+            this.MarkAsComboBox.StartIndex = 0;
+            this.MarkAsComboBox.TabIndex = 7;
             // 
             // label1
             // 
@@ -425,19 +428,35 @@ namespace DIgital_Diary.DesignInterface
             this.label3.TabIndex = 12;
             this.label3.Text = "Create New Event";
             // 
+            // EventDate
+            // 
+            this.EventDate.AutoSize = true;
+            this.EventDate.Location = new System.Drawing.Point(731, 83);
+            this.EventDate.Name = "EventDate";
+            this.EventDate.Size = new System.Drawing.Size(35, 13);
+            this.EventDate.TabIndex = 13;
+            this.EventDate.Text = "label4";
+            this.EventDate.Click += new System.EventHandler(this.EventDate_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // CreateNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1458, 717);
+            this.Controls.Add(this.EventDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2ComboBox1);
-            this.Controls.Add(this.Loginbtn);
-            this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.UserNameTextBox);
+            this.Controls.Add(this.MarkAsComboBox);
+            this.Controls.Add(this.PostNewEvent);
+            this.Controls.Add(this.EventDescription);
+            this.Controls.Add(this.EventTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(227, 61);
             this.Name = "CreateNote";
@@ -456,10 +475,10 @@ namespace DIgital_Diary.DesignInterface
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox UserNameTextBox;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button Loginbtn;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2TextBox EventTitle;
+        private Guna.UI2.WinForms.Guna2TextBox EventDescription;
+        private Guna.UI2.WinForms.Guna2Button PostNewEvent;
+        private Guna.UI2.WinForms.Guna2ComboBox MarkAsComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
@@ -481,5 +500,7 @@ namespace DIgital_Diary.DesignInterface
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label EventDate;
+        private System.Windows.Forms.Timer timer2;
     }
 }

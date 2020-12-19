@@ -118,6 +118,7 @@ namespace DIgital_Diary
 
             CreateNote CreateNewNote = new CreateNote();
             CreateNewNote.Show();
+            this.Hide();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
