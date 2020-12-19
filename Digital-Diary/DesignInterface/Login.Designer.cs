@@ -40,6 +40,8 @@ namespace DIgital_Diary
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.loginclosed = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SignUpLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,11 +176,37 @@ namespace DIgital_Diary
             this.loginclosed.Size = new System.Drawing.Size(38, 29);
             this.loginclosed.TabIndex = 8;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("JetBrains Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(526, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Don’t have an account";
+            // 
+            // SignUpLink
+            // 
+            this.SignUpLink.AutoSize = true;
+            this.SignUpLink.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SignUpLink.Font = new System.Drawing.Font("JetBrains Mono", 9.749999F);
+            this.SignUpLink.LinkColor = System.Drawing.Color.Black;
+            this.SignUpLink.Location = new System.Drawing.Point(526, 377);
+            this.SignUpLink.Name = "SignUpLink";
+            this.SignUpLink.Size = new System.Drawing.Size(176, 17);
+            this.SignUpLink.TabIndex = 11;
+            this.SignUpLink.TabStop = true;
+            this.SignUpLink.Text = "Click Here to Sign Up";
+            this.SignUpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpLink_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SignUpLink);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.loginclosed);
             this.Controls.Add(this.pictureBox1);
@@ -206,6 +234,8 @@ namespace DIgital_Diary
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox loginclosed;
+        private System.Windows.Forms.LinkLabel SignUpLink;
+        private System.Windows.Forms.Label label2;
     }
 }
 

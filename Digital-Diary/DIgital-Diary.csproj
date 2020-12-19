@@ -73,6 +73,12 @@
     </Compile>
     <Compile Include="DataAccessLayer\DataAccess.cs" />
     <Compile Include="DataAccessLayer\UserAccess.cs" />
+    <Compile Include="DesignInterface\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignInterface\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\User.cs" />
     <Compile Include="DesignInterface\Login.cs">
       <SubType>Form</SubType>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DesignInterface\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignInterface\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

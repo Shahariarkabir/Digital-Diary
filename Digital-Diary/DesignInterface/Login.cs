@@ -1,4 +1,5 @@
 ﻿using DIgital_Diary.BusinessLayer;
+using DIgital_Diary.DesignInterface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,11 +38,26 @@ namespace DIgital_Diary
                 else
                 {
                     MessageBox.Show("Invalid Username or password");
+                    UserNameTextBox.Clear();
+                    PasswordTextBox.Clear();
+
+
                 }
             }
 
 
         }
-   
+
+        private void SignUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            {
+                RegistrationForm registerUser = new RegistrationForm();
+                registerUser.Show();
+                this.Hide();
+
+            }
+
+        }
     }
 }

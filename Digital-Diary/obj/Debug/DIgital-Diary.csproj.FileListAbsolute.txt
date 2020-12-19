@@ -45,3 +45,4 @@ D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\bin\Debug\MaterialDesignColo
 D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\bin\Debug\MaterialDesignThemes.Wpf.pdb
 D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\bin\Debug\MaterialDesignThemes.Wpf.xml
 D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\obj\Debug\DIgital-Diary.csproj.CopyComplete
+D:\GitHub\Digital_Diary\Digital-Diary\Digital-Diary\obj\Debug\DIgital_Diary.DesignInterface.RegistrationForm.resources
