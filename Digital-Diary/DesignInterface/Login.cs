@@ -59,5 +59,10 @@ namespace DIgital_Diary
             }
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

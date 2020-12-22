@@ -7,19 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DIgital_Diary.DesignInterface;
 using FontAwesome.Sharp;
-
-namespace DIgital_Diary
+namespace DIgital_Diary.DesignInterface
 {
-    public partial class Dashboard : Form
+    public partial class About : Form
+
     {
         //Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
-
-        public Dashboard()
+        public About()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -30,6 +28,7 @@ namespace DIgital_Diary
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
 
         //Structs
@@ -48,7 +47,7 @@ namespace DIgital_Diary
         {
             if (senderBtn != null)
             {
-               DisableButton();
+                DisableButton();
                 //Button
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(255, 255, 255);
@@ -69,7 +68,7 @@ namespace DIgital_Diary
 
             }
         }
-       private void DisableButton()
+        private void DisableButton()
         {
             if (currentBtn != null)
             {
@@ -93,8 +92,8 @@ namespace DIgital_Diary
             //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-   
-           
+
+
         }
         private void Reset()
         {
@@ -102,10 +101,17 @@ namespace DIgital_Diary
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
-       
+
         }
         //Events
         //Reset
+        private void btnSignout_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+            Login LoginPage = new Login();
+            LoginPage.Show();
+            this.Hide();
+        }
 
         private void btnAllNote_Click(object sender, EventArgs e)
         {
@@ -115,31 +121,16 @@ namespace DIgital_Diary
         private void btnCreateNote_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-
             CreateNote CreateNewNote = new CreateNote();
             CreateNewNote.Show();
             this.Hide();
         }
 
-        private void btnSetting_Click(object sender, EventArgs e)
+        private void btnAbout_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             About Aboutpage = new About();
             Aboutpage.Show();
-        }
-
-        private void btnTag_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            Login LoginPage = new Login();
-            LoginPage.Show();
-            this.Hide();
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label1.Text = DateTime.Now.ToString("HH:MM tt");
         }
     }
 }

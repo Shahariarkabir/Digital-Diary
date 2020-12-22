@@ -70,6 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DesignInterface\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignInterface\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="DesignInterface\CreateNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DesignInterface\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DesignInterface\CreateNote.resx">
       <DependentUpon>CreateNote.cs</DependentUpon>
     </EmbeddedResource>
