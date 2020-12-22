@@ -129,7 +129,10 @@ namespace DIgital_Diary
         private void btnTag_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-      
+            Login LoginPage = new Login();
+            LoginPage.Show();
+            this.Hide();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

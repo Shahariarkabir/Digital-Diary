@@ -33,12 +33,13 @@ namespace DIgital_Diary
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
-            this.btnTag = new FontAwesome.Sharp.IconButton();
+            this.btnSignout = new FontAwesome.Sharp.IconButton();
             this.btnCreateNote = new FontAwesome.Sharp.IconButton();
             this.btnAllNote = new FontAwesome.Sharp.IconButton();
             this.Panellogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Searchbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,7 +50,6 @@ namespace DIgital_Diary
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dataSet1 = new DIgital_Diary.DataSet1();
             this.panelMenu.SuspendLayout();
             this.Panellogo.SuspendLayout();
@@ -64,7 +64,7 @@ namespace DIgital_Diary
             // 
             this.panelMenu.BackColor = System.Drawing.Color.White;
             this.panelMenu.Controls.Add(this.btnSetting);
-            this.panelMenu.Controls.Add(this.btnTag);
+            this.panelMenu.Controls.Add(this.btnSignout);
             this.panelMenu.Controls.Add(this.btnCreateNote);
             this.panelMenu.Controls.Add(this.btnAllNote);
             this.panelMenu.Controls.Add(this.Panellogo);
@@ -80,7 +80,7 @@ namespace DIgital_Diary
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Angellist;
             this.btnSetting.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,31 +88,30 @@ namespace DIgital_Diary
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(225, 65);
             this.btnSetting.TabIndex = 7;
-            this.btnSetting.Text = "Setting";
+            this.btnSetting.Text = "About US";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSetting.UseVisualStyleBackColor = true;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
-            // btnTag
+            // btnSignout
             // 
-            this.btnTag.FlatAppearance.BorderSize = 0;
-            this.btnTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTag.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnTag.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            this.btnTag.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnTag.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTag.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTag.Location = new System.Drawing.Point(0, 347);
-            this.btnTag.Name = "btnTag";
-            this.btnTag.Size = new System.Drawing.Size(225, 65);
-            this.btnTag.TabIndex = 6;
-            this.btnTag.Text = "Tag";
-            this.btnTag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTag.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTag.UseVisualStyleBackColor = true;
-            this.btnTag.Click += new System.EventHandler(this.btnTag_Click);
+            this.btnSignout.FlatAppearance.BorderSize = 0;
+            this.btnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignout.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.btnSignout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnSignout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSignout.Location = new System.Drawing.Point(3, 609);
+            this.btnSignout.Name = "btnSignout";
+            this.btnSignout.Size = new System.Drawing.Size(225, 65);
+            this.btnSignout.TabIndex = 6;
+            this.btnSignout.Text = "Sign out";
+            this.btnSignout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignout.UseVisualStyleBackColor = true;
+            this.btnSignout.Click += new System.EventHandler(this.btnTag_Click);
             // 
             // btnCreateNote
             // 
@@ -187,6 +186,13 @@ namespace DIgital_Diary
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1231, 67);
             this.paneltop.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1231, 656);
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
@@ -298,13 +304,6 @@ namespace DIgital_Diary
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1231, 656);
-            this.panel1.TabIndex = 2;
-            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
@@ -340,7 +339,7 @@ namespace DIgital_Diary
         private System.Windows.Forms.FlowLayoutPanel Panellogo;
         private System.Windows.Forms.Panel paneltop;
         private FontAwesome.Sharp.IconButton btnSetting;
-        private FontAwesome.Sharp.IconButton btnTag;
+        private FontAwesome.Sharp.IconButton btnSignout;
         private FontAwesome.Sharp.IconButton btnCreateNote;
         private FontAwesome.Sharp.IconButton btnAllNote;
         private System.Windows.Forms.PictureBox pictureBox1;
