@@ -116,6 +116,9 @@ namespace DIgital_Diary.DesignInterface
         private void btnAllNote_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            Dashboard Dashboard = new Dashboard();
+            Dashboard.Show();
+            this.Hide();
         }
 
         private void btnCreateNote_Click(object sender, EventArgs e)
@@ -132,6 +135,16 @@ namespace DIgital_Diary.DesignInterface
             About Aboutpage = new About();
             Aboutpage.Show();
             this.Hide();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("HH:MM:ss tt");
+        }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

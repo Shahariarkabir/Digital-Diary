@@ -110,6 +110,9 @@ namespace DIgital_Diary
         private void btnAllNote_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            Dashboard Dashboard = new Dashboard();
+            Dashboard.Show();
+            this.Hide();
         }
 
         private void btnCreateNote_Click(object sender, EventArgs e)

@@ -116,6 +116,9 @@ namespace DIgital_Diary.DesignInterface
         private void btnAllNote_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            Dashboard Dashboard = new Dashboard();
+            Dashboard.Show();
+            this.Hide();
         }
 
         private void btnCreateNote_Click(object sender, EventArgs e)
@@ -134,14 +137,8 @@ namespace DIgital_Diary.DesignInterface
             this.Hide();
         }
 
-
-
-
         private void PostNewEvent_Click(object sender, EventArgs e)
         {
-
-            
-            
                 SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["Digital_Diary"].ConnectionString);
                 connection.Open();
 
@@ -154,21 +151,19 @@ namespace DIgital_Diary.DesignInterface
                 {
                     MessageBox.Show("Event added successfully.");
                     EventTitle.Text = EventDescription.Text = MarkAsComboBox.Text = EventDateTimePicker.Text = string.Empty;
-
                     Dashboard dashBoard = new Dashboard();
                     dashBoard.Show();
                     this.Hide();
                 }
                 else
                 {
-
-
                     MessageBox.Show("Error in Event Creation");
-
-
-
                 }
             }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("HH:MM:ss tt");
+        }
     }
 }

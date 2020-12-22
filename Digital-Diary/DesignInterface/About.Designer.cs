@@ -33,7 +33,6 @@ namespace DIgital_Diary.DesignInterface
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             this.btnAbout = new FontAwesome.Sharp.IconButton();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -88,10 +87,7 @@ namespace DIgital_Diary.DesignInterface
             // timer2
             // 
             this.timer2.Enabled = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // panel1
             // 
@@ -378,6 +374,7 @@ namespace DIgital_Diary.DesignInterface
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
@@ -395,7 +392,6 @@ namespace DIgital_Diary.DesignInterface
 
         private FontAwesome.Sharp.IconButton btnAbout;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Panel paneltop;
