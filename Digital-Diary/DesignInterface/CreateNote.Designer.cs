@@ -47,6 +47,8 @@ namespace DIgital_Diary.DesignInterface
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnAbout = new FontAwesome.Sharp.IconButton();
+            this.btnSignout = new FontAwesome.Sharp.IconButton();
             this.btnCreateNote = new FontAwesome.Sharp.IconButton();
             this.btnAllNote = new FontAwesome.Sharp.IconButton();
             this.Panellogo = new System.Windows.Forms.FlowLayoutPanel();
@@ -54,10 +56,7 @@ namespace DIgital_Diary.DesignInterface
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.EventDate = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btnSignout = new FontAwesome.Sharp.IconButton();
-            this.btnAbout = new FontAwesome.Sharp.IconButton();
+            this.EventDateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
@@ -314,6 +313,45 @@ namespace DIgital_Diary.DesignInterface
             this.panelMenu.Size = new System.Drawing.Size(225, 717);
             this.panelMenu.TabIndex = 10;
             // 
+            // btnAbout
+            // 
+            this.btnAbout.FlatAppearance.BorderSize = 0;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.Angellist;
+            this.btnAbout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(3, 286);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(225, 65);
+            this.btnAbout.TabIndex = 9;
+            this.btnAbout.Text = "About US";
+            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // btnSignout
+            // 
+            this.btnSignout.FlatAppearance.BorderSize = 0;
+            this.btnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignout.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.btnSignout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnSignout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
+            this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSignout.Location = new System.Drawing.Point(0, 595);
+            this.btnSignout.Name = "btnSignout";
+            this.btnSignout.Size = new System.Drawing.Size(225, 65);
+            this.btnSignout.TabIndex = 8;
+            this.btnSignout.Text = "Sign out";
+            this.btnSignout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSignout.UseVisualStyleBackColor = true;
+            this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
+            // 
             // btnCreateNote
             // 
             this.btnCreateNote.FlatAppearance.BorderSize = 0;
@@ -392,66 +430,29 @@ namespace DIgital_Diary.DesignInterface
             this.label3.TabIndex = 12;
             this.label3.Text = "Create New Event";
             // 
-            // EventDate
+            // EventDateTimePicker
             // 
-            this.EventDate.AutoSize = true;
-            this.EventDate.Location = new System.Drawing.Point(731, 83);
-            this.EventDate.Name = "EventDate";
-            this.EventDate.Size = new System.Drawing.Size(35, 13);
-            this.EventDate.TabIndex = 13;
-            this.EventDate.Text = "label4";
-            this.EventDate.Click += new System.EventHandler(this.EventDate_Click);
-            // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // btnSignout
-            // 
-            this.btnSignout.FlatAppearance.BorderSize = 0;
-            this.btnSignout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignout.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnSignout.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btnSignout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnSignout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSignout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSignout.Location = new System.Drawing.Point(0, 595);
-            this.btnSignout.Name = "btnSignout";
-            this.btnSignout.Size = new System.Drawing.Size(225, 65);
-            this.btnSignout.TabIndex = 8;
-            this.btnSignout.Text = "Sign out";
-            this.btnSignout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSignout.UseVisualStyleBackColor = true;
-            this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.FlatAppearance.BorderSize = 0;
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnAbout.IconChar = FontAwesome.Sharp.IconChar.Angellist;
-            this.btnAbout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(30)))), ((int)(((byte)(63)))));
-            this.btnAbout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(3, 286);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(225, 65);
-            this.btnAbout.TabIndex = 9;
-            this.btnAbout.Text = "About US";
-            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            this.EventDateTimePicker.CheckedState.Parent = this.EventDateTimePicker;
+            this.EventDateTimePicker.FillColor = System.Drawing.Color.Transparent;
+            this.EventDateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EventDateTimePicker.ForeColor = System.Drawing.Color.Transparent;
+            this.EventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.EventDateTimePicker.HoverState.Parent = this.EventDateTimePicker;
+            this.EventDateTimePicker.Location = new System.Drawing.Point(971, 80);
+            this.EventDateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.EventDateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.EventDateTimePicker.Name = "EventDateTimePicker";
+            this.EventDateTimePicker.ShadowDecoration.Parent = this.EventDateTimePicker;
+            this.EventDateTimePicker.Size = new System.Drawing.Size(200, 36);
+            this.EventDateTimePicker.TabIndex = 13;
+            this.EventDateTimePicker.Value = new System.DateTime(2020, 12, 23, 1, 29, 23, 321);
             // 
             // CreateNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1458, 717);
-            this.Controls.Add(this.EventDate);
+            this.Controls.Add(this.EventDateTimePicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panelMenu);
@@ -502,9 +503,8 @@ namespace DIgital_Diary.DesignInterface
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label EventDate;
-        private System.Windows.Forms.Timer timer2;
         private FontAwesome.Sharp.IconButton btnSignout;
         private FontAwesome.Sharp.IconButton btnAbout;
+        private Guna.UI2.WinForms.Guna2DateTimePicker EventDateTimePicker;
     }
 }

@@ -131,6 +131,7 @@ namespace DIgital_Diary.DesignInterface
             ActivateButton(sender, RGBColors.color3);
             About Aboutpage = new About();
             Aboutpage.Show();
+            this.Hide();
         }
     }
 }

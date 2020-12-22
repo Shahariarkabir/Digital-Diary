@@ -126,6 +126,7 @@ namespace DIgital_Diary
             ActivateButton(sender, RGBColors.color3);
             About Aboutpage = new About();
             Aboutpage.Show();
+            this.Hide();
         }
 
         private void btnTag_Click(object sender, EventArgs e)
