@@ -96,6 +96,11 @@
     <Compile Include="DesignInterface\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DIgital_DiaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIgital_DiaryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entities\User.cs" />
     <Compile Include="DesignInterface\Login.cs">
       <SubType>Form</SubType>
@@ -139,6 +144,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DIgital_DiaryDataSet.xsc">
+      <DependentUpon>DIgital_DiaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DIgital_DiaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIgital_DiaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIgital_DiaryDataSet.xss">
+      <DependentUpon>DIgital_DiaryDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

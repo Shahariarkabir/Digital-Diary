@@ -142,5 +142,14 @@ namespace DIgital_Diary
         {
             label1.Text = DateTime.Now.ToString("HH:MM tt");
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dIgital_DiaryDataSet.New_Events' table. You can move, or remove it, as needed.
+            this.new_EventsTableAdapter.Fill(this.dIgital_DiaryDataSet.New_Events);
+
+        }
+
+
     }
 }
