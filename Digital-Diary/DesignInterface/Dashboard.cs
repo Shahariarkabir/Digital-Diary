@@ -140,7 +140,7 @@ namespace DIgital_Diary
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString("HH:MM tt");
+            label1.Text = DateTime.Now.ToString("HH:MM:ss tt");
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -149,7 +149,6 @@ namespace DIgital_Diary
             this.new_EventsTableAdapter.Fill(this.dIgital_DiaryDataSet.New_Events);
 
         }
-
 
     }
 }
