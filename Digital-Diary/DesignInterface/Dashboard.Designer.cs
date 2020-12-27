@@ -55,15 +55,15 @@ namespace DIgital_Diary
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataSet1 = new DIgital_Diary.DataSet1();
             this.DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.eventIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.newEventsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dIgital_DiaryDataSet = new DIgital_Diary.DIgital_DiaryDataSet();
             this.new_EventsTableAdapter = new DIgital_Diary.DIgital_DiaryDataSetTableAdapters.New_EventsTableAdapter();
+            this.eventIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eventImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelMenu.SuspendLayout();
             this.Panellogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -347,10 +347,10 @@ namespace DIgital_Diary
             this.DataGridView1.ColumnHeadersHeight = 18;
             this.DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.eventIDDataGridViewTextBoxColumn,
+            this.eventDateDataGridViewTextBoxColumn,
             this.eventTitleDataGridViewTextBoxColumn,
             this.eventDescriptionDataGridViewTextBoxColumn,
             this.eventTypeDataGridViewTextBoxColumn,
-            this.eventDateDataGridViewTextBoxColumn,
             this.eventImageDataGridViewImageColumn});
             this.DataGridView1.DataSource = this.newEventsBindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -392,12 +392,32 @@ namespace DIgital_Diary
             this.DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
             this.DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // newEventsBindingSource
+            // 
+            this.newEventsBindingSource.DataMember = "New_Events";
+            this.newEventsBindingSource.DataSource = this.dIgital_DiaryDataSet;
+            // 
+            // dIgital_DiaryDataSet
+            // 
+            this.dIgital_DiaryDataSet.DataSetName = "DIgital_DiaryDataSet";
+            this.dIgital_DiaryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // new_EventsTableAdapter
+            // 
+            this.new_EventsTableAdapter.ClearBeforeFill = true;
+            // 
             // eventIDDataGridViewTextBoxColumn
             // 
             this.eventIDDataGridViewTextBoxColumn.DataPropertyName = "EventID";
             this.eventIDDataGridViewTextBoxColumn.HeaderText = "EventID";
             this.eventIDDataGridViewTextBoxColumn.Name = "eventIDDataGridViewTextBoxColumn";
             this.eventIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // eventDateDataGridViewTextBoxColumn
+            // 
+            this.eventDateDataGridViewTextBoxColumn.DataPropertyName = "EventDate";
+            this.eventDateDataGridViewTextBoxColumn.HeaderText = "EventDate";
+            this.eventDateDataGridViewTextBoxColumn.Name = "eventDateDataGridViewTextBoxColumn";
             // 
             // eventTitleDataGridViewTextBoxColumn
             // 
@@ -417,31 +437,11 @@ namespace DIgital_Diary
             this.eventTypeDataGridViewTextBoxColumn.HeaderText = "EventType";
             this.eventTypeDataGridViewTextBoxColumn.Name = "eventTypeDataGridViewTextBoxColumn";
             // 
-            // eventDateDataGridViewTextBoxColumn
-            // 
-            this.eventDateDataGridViewTextBoxColumn.DataPropertyName = "EventDate";
-            this.eventDateDataGridViewTextBoxColumn.HeaderText = "EventDate";
-            this.eventDateDataGridViewTextBoxColumn.Name = "eventDateDataGridViewTextBoxColumn";
-            // 
             // eventImageDataGridViewImageColumn
             // 
             this.eventImageDataGridViewImageColumn.DataPropertyName = "EventImage";
             this.eventImageDataGridViewImageColumn.HeaderText = "EventImage";
             this.eventImageDataGridViewImageColumn.Name = "eventImageDataGridViewImageColumn";
-            // 
-            // newEventsBindingSource
-            // 
-            this.newEventsBindingSource.DataMember = "New_Events";
-            this.newEventsBindingSource.DataSource = this.dIgital_DiaryDataSet;
-            // 
-            // dIgital_DiaryDataSet
-            // 
-            this.dIgital_DiaryDataSet.DataSetName = "DIgital_DiaryDataSet";
-            this.dIgital_DiaryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // new_EventsTableAdapter
-            // 
-            this.new_EventsTableAdapter.ClearBeforeFill = true;
             // 
             // Dashboard
             // 
@@ -500,10 +500,10 @@ namespace DIgital_Diary
         private System.Windows.Forms.BindingSource newEventsBindingSource;
         private DIgital_DiaryDataSetTableAdapters.New_EventsTableAdapter new_EventsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn eventDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventTitleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn eventDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn eventImageDataGridViewImageColumn;
     }
 }
