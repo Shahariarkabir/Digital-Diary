@@ -244,13 +244,31 @@ namespace DIgital_Diary
                 MessageBox.Show(ex.Message);
             }
         }
-        
-        
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                connection.Open();
+                string sql = "Select * From New_Event where EventTitle Like'%"+Searchbox.Text+ "%'";
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                SqlDataReader rdr = cmd.ExecuteReader();
+                dt.Load(rdr);
+                connection.Close();
+                DataGridViewMain.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 
 }
 
 
-
+//or EventType Like '%" + Searchbox.Text + "%' or EventDescription Like '%" + Searchbox.Text + "%'
 
 

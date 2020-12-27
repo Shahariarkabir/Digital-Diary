@@ -31,9 +31,9 @@ namespace DIgital_Diary
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnAbout = new FontAwesome.Sharp.IconButton();
             this.btnSignout = new FontAwesome.Sharp.IconButton();
@@ -42,6 +42,7 @@ namespace DIgital_Diary
             this.Panellogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,7 +62,6 @@ namespace DIgital_Diary
             this.eventDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eventTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ModifyDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eventImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.newEventBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dIgital_DiaryDataSet2 = new DIgital_Diary.DIgital_DiaryDataSet2();
             this.newEventsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -212,6 +212,7 @@ namespace DIgital_Diary
             // paneltop
             // 
             this.paneltop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.paneltop.Controls.Add(this.btnSearch);
             this.paneltop.Controls.Add(this.panel1);
             this.paneltop.Controls.Add(this.label1);
             this.paneltop.Controls.Add(this.pictureBox2);
@@ -223,6 +224,25 @@ namespace DIgital_Diary
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1231, 67);
             this.paneltop.TabIndex = 1;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearch.IconColor = System.Drawing.Color.ForestGreen;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 36;
+            this.btnSearch.Location = new System.Drawing.Point(376, 16);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(63, 43);
+            this.btnSearch.TabIndex = 8;
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.UseMnemonic = false;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel1
             // 
@@ -246,7 +266,7 @@ namespace DIgital_Diary
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(68, 22);
+            this.pictureBox2.Location = new System.Drawing.Point(85, 21);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -269,15 +289,15 @@ namespace DIgital_Diary
             this.Searchbox.Font = new System.Drawing.Font("JetBrains Mono", 9.749999F);
             this.Searchbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Searchbox.HoverState.Parent = this.Searchbox;
-            this.Searchbox.Location = new System.Drawing.Point(35, 14);
+            this.Searchbox.Location = new System.Drawing.Point(51, 14);
             this.Searchbox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Searchbox.Name = "Searchbox";
             this.Searchbox.PasswordChar = '\0';
             this.Searchbox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Searchbox.PlaceholderText = "Search Note";
+            this.Searchbox.PlaceholderText = "Search  Title";
             this.Searchbox.SelectedText = "";
             this.Searchbox.ShadowDecoration.Parent = this.Searchbox;
-            this.Searchbox.Size = new System.Drawing.Size(566, 40);
+            this.Searchbox.Size = new System.Drawing.Size(319, 40);
             this.Searchbox.TabIndex = 2;
             this.Searchbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -350,22 +370,22 @@ namespace DIgital_Diary
             // 
             this.DataGridViewMain.AllowUserToAddRows = false;
             this.DataGridViewMain.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
-            this.DataGridViewMain.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
+            this.DataGridViewMain.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridViewMain.AutoGenerateColumns = false;
             this.DataGridViewMain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridViewMain.BackgroundColor = System.Drawing.Color.White;
             this.DataGridViewMain.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewMain.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridViewMain.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewMain.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewMain.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridViewMain.ColumnHeadersHeight = 18;
             this.DataGridViewMain.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.eventIDDataGridViewTextBoxColumn,
@@ -373,25 +393,24 @@ namespace DIgital_Diary
             this.eventTitleDataGridViewTextBoxColumn,
             this.eventDescriptionDataGridViewTextBoxColumn,
             this.eventTypeDataGridViewTextBoxColumn,
-            this.ModifyDate,
-            this.eventImageDataGridViewImageColumn});
+            this.ModifyDate});
             this.DataGridViewMain.DataSource = this.newEventBindingSource;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewMain.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(220)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("JetBrains Mono", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(139)))), ((int)(((byte)(205)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewMain.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridViewMain.EnableHeadersVisualStyles = false;
             this.DataGridViewMain.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(201)))), ((int)(((byte)(231)))));
-            this.DataGridViewMain.Location = new System.Drawing.Point(244, 90);
+            this.DataGridViewMain.Location = new System.Drawing.Point(278, 80);
             this.DataGridViewMain.Name = "DataGridViewMain";
             this.DataGridViewMain.ReadOnly = true;
             this.DataGridViewMain.RowHeadersVisible = false;
             this.DataGridViewMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewMain.Size = new System.Drawing.Size(734, 515);
+            this.DataGridViewMain.Size = new System.Drawing.Size(685, 515);
             this.DataGridViewMain.TabIndex = 2;
             this.DataGridViewMain.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Indigo;
             this.DataGridViewMain.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(203)))), ((int)(((byte)(232)))));
@@ -458,13 +477,6 @@ namespace DIgital_Diary
             this.ModifyDate.HeaderText = "ModifyDate";
             this.ModifyDate.Name = "ModifyDate";
             this.ModifyDate.ReadOnly = true;
-            // 
-            // eventImageDataGridViewImageColumn
-            // 
-            this.eventImageDataGridViewImageColumn.DataPropertyName = "EventImage";
-            this.eventImageDataGridViewImageColumn.HeaderText = "EventImage";
-            this.eventImageDataGridViewImageColumn.Name = "eventImageDataGridViewImageColumn";
-            this.eventImageDataGridViewImageColumn.ReadOnly = true;
             // 
             // newEventBindingSource
             // 
@@ -771,15 +783,15 @@ namespace DIgital_Diary
         private DIgital_DiaryDataSet1 dIgital_DiaryDataSet1;
         private System.Windows.Forms.BindingSource newEventsBindingSource1;
         private DIgital_DiaryDataSet1TableAdapters.New_EventsTableAdapter new_EventsTableAdapter1;
+        private DIgital_DiaryDataSet2 dIgital_DiaryDataSet2;
+        private System.Windows.Forms.BindingSource newEventBindingSource;
+        private DIgital_DiaryDataSet2TableAdapters.New_EventTableAdapter new_EventTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventTitleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventDescriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eventTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ModifyDate;
-        private System.Windows.Forms.DataGridViewImageColumn eventImageDataGridViewImageColumn;
-        private DIgital_DiaryDataSet2 dIgital_DiaryDataSet2;
-        private System.Windows.Forms.BindingSource newEventBindingSource;
-        private DIgital_DiaryDataSet2TableAdapters.New_EventTableAdapter new_EventTableAdapter;
+        private FontAwesome.Sharp.IconButton btnSearch;
     }
 }
