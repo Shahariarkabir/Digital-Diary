@@ -446,7 +446,7 @@ namespace DIgital_Diary.DesignInterface
             this.EventDateTimePicker.ShadowDecoration.Parent = this.EventDateTimePicker;
             this.EventDateTimePicker.Size = new System.Drawing.Size(200, 36);
             this.EventDateTimePicker.TabIndex = 13;
-            this.EventDateTimePicker.Value = new System.DateTime(2020, 12, 23, 1, 29, 23, 321);
+            this.EventDateTimePicker.Value = new System.DateTime(2020, 12, 28, 0, 0, 0, 0);
             // 
             // CreateNote
             // 
